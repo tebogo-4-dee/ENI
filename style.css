@@ -1,7 +1,7 @@
 /* =============================================
    ENI GROUP — GLOBAL STYLESHEET
    Enterprise Network International Group
-   Version: 1.1 | September 2026
+   Version: 1.2 | September 2026
 ============================================= */
 
 /* =============================================
@@ -133,7 +133,7 @@ section { padding: 100px 0; }
 }
 
 /* =============================================
-   NAVBAR
+   NAVBAR — white background for logo visibility
 ============================================= */
 .navbar {
   position: fixed;
@@ -141,10 +141,10 @@ section { padding: 100px 0; }
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(6, 8, 13, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #E5E7EB;
   transition: box-shadow var(--transition);
 }
 
@@ -155,7 +155,6 @@ section { padding: 100px 0; }
   height: 72px;
 }
 
-/* ---- Logo image ---- */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -177,7 +176,7 @@ section { padding: 100px 0; }
 .nav-links a {
   font-size: 0.78rem;
   font-weight: 500;
-  color: var(--muted);
+  color: #374151;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: color var(--transition);
@@ -200,7 +199,7 @@ section { padding: 100px 0; }
   gap: 7px;
   font-size: 0.78rem;
   font-weight: 500;
-  color: var(--muted);
+  color: #374151;
   letter-spacing: 0.04em;
   transition: color var(--transition);
   white-space: nowrap;
@@ -212,13 +211,13 @@ section { padding: 100px 0; }
   display: none;
   background: none;
   border: none;
-  color: var(--text);
+  color: #374151;
   font-size: 1.25rem;
   cursor: pointer;
   padding: 4px;
 }
 
-/* Mobile nav open */
+/* Mobile nav open state */
 .navbar.open .nav-links {
   display: flex;
   flex-direction: column;
@@ -226,13 +225,21 @@ section { padding: 100px 0; }
   top: 72px;
   left: 0;
   right: 0;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  background: #ffffff;
+  border-bottom: 1px solid #E5E7EB;
   padding: 28px 32px;
   gap: 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-.navbar.open .nav-links a { font-size: 0.9rem; }
+.navbar.open .nav-links a {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.navbar.open .nav-links a:hover {
+  color: var(--gold);
+}
 
 /* =============================================
    HERO
@@ -501,8 +508,8 @@ section { padding: 100px 0; }
   border-radius: 2px;
 }
 
-.status-execute { background: rgba(201,168,76,0.15); color: var(--gold); }
-.status-activate { background: rgba(26,107,107,0.2); color: var(--teal-light); }
+.status-execute  { background: rgba(201,168,76,0.15); color: var(--gold); }
+.status-activate { background: rgba(26,107,107,0.2);  color: var(--teal-light); }
 .status-position { background: rgba(122,130,153,0.15); color: var(--muted); }
 
 .eco-card-num {
@@ -651,7 +658,7 @@ section { padding: 100px 0; }
   margin-bottom: 12px;
 }
 
-.featured-card h3 { font-size: 1.3rem; line-height: 1.3; }
+.featured-card h3    { font-size: 1.3rem; line-height: 1.3; }
 .featured-card-sm h3 { font-size: 1rem; }
 
 .featured-card-meta {
@@ -777,15 +784,11 @@ section { padding: 100px 0; }
 
 .partner-logo-item:hover { opacity: 1; }
 
-/* Partner logo image sizing */
 .partner-logo-item img {
   height: 36px;
   width: auto;
   object-fit: contain;
   display: block;
-  /* If a logo has a white background, add a filter to help it blend:
-     filter: brightness(0) invert(1);
-     Use only when logos are provided as solid-colour marks, not full-colour */
 }
 
 .partner-logo-item a {
@@ -950,17 +953,17 @@ section { padding: 100px 0; }
 }
 
 @media (max-width: 768px) {
-  section     { padding: 72px 0; }
-  .container  { padding: 0 20px; }
+  section    { padding: 72px 0; }
+  .container { padding: 0 20px; }
 
-  .nav-links    { display: none; }
-  .btn-nav-wa   { display: none; }
-  .menu-toggle  { display: block; }
+  .nav-links   { display: none; }
+  .btn-nav-wa  { display: none; }
+  .menu-toggle { display: block; }
 
   .nav-logo-img { height: 36px; }
 
-  .hero h1 { font-size: 2.2rem; }
-  .hero-body { font-size: 0.95rem; }
+  .hero h1     { font-size: 2.2rem; }
+  .hero-body   { font-size: 0.95rem; }
   .hero-actions { flex-direction: column; }
 
   .hero-stats {
@@ -974,18 +977,19 @@ section { padding: 100px 0; }
     padding: 22px 0;
   }
 
-  .eco-grid-4 { grid-template-columns: 1fr 1fr; }
+  .eco-grid-4  { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .footer-bottom-right { flex-wrap: wrap; gap: 14px; }
 
   .partner-logo-item { padding: 0 28px; }
+
   .partners-track-wrap::before,
   .partners-track-wrap::after { width: 60px; }
 }
 
 @media (max-width: 520px) {
-  .hero h1     { font-size: 1.85rem; }
+  .hero h1      { font-size: 1.85rem; }
   .gateway-grid { grid-template-columns: 1fr; }
-  .eco-grid-4  { grid-template-columns: 1fr; }
+  .eco-grid-4   { grid-template-columns: 1fr; }
 }
