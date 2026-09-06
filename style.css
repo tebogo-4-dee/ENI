@@ -993,3 +993,12 @@ section { padding: 100px 0; }
   .gateway-grid { grid-template-columns: 1fr; }
   .eco-grid-4   { grid-template-columns: 1fr; }
 }
+
+/* Partner logo sizing — consistent height, natural width */
+.partner-logo-item img {
+  height: 44px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+}
