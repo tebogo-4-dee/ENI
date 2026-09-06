@@ -1,7 +1,7 @@
 /* =============================================
    ENI GROUP — GLOBAL STYLESHEET
    Enterprise Network International Group
-   Version: 1.0 | September 2026
+   Version: 1.1 | September 2026
 ============================================= */
 
 /* =============================================
@@ -15,14 +15,12 @@
   --gold:      #C9A84C;
   --gold-light:#E4C97A;
   --gold-dim:  rgba(201,168,76,0.12);
-  --teal:      #1A6B6B;
   --teal-light:#22908F;
   --text:      #E8E4DC;
   --muted:     #7A8299;
   --muted-2:   #4A5568;
   --radius-sm: 4px;
   --radius:    8px;
-  --radius-lg: 16px;
   --transition: 0.22s ease;
 }
 
@@ -32,9 +30,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -51,16 +47,8 @@ h1, h2, h3, h4 {
   color: var(--text);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
 ul { list-style: none; }
 
 /* =============================================
@@ -73,9 +61,7 @@ ul { list-style: none; }
   padding: 0 32px;
 }
 
-section {
-  padding: 100px 0;
-}
+section { padding: 100px 0; }
 
 /* =============================================
    BUTTONS
@@ -121,9 +107,7 @@ section {
   transition: background var(--transition);
 }
 
-.btn-outline:hover {
-  background: var(--gold-dim);
-}
+.btn-outline:hover { background: var(--gold-dim); }
 
 .btn-ghost {
   display: inline-flex;
@@ -171,34 +155,23 @@ section {
   height: 72px;
 }
 
+/* ---- Logo image ---- */
 .nav-logo {
   display: flex;
-  flex-direction: column;
-  gap: 1px;
+  align-items: center;
   flex-shrink: 0;
 }
 
-.nav-logo-primary {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  color: var(--gold);
-  text-transform: uppercase;
-}
-
-.nav-logo-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text);
-  letter-spacing: 0.04em;
-  white-space: nowrap;
+.nav-logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav-links {
   display: flex;
-  gap: 32px;
+  gap: 28px;
 }
 
 .nav-links a {
@@ -212,9 +185,7 @@ section {
 }
 
 .nav-links a:hover,
-.nav-links a.active {
-  color: var(--gold);
-}
+.nav-links a.active { color: var(--gold); }
 
 .nav-actions {
   display: flex;
@@ -235,9 +206,7 @@ section {
   white-space: nowrap;
 }
 
-.btn-nav-wa:hover {
-  color: #25D366;
-}
+.btn-nav-wa:hover { color: #25D366; }
 
 .menu-toggle {
   display: none;
@@ -249,7 +218,7 @@ section {
   padding: 4px;
 }
 
-/* Mobile nav open state */
+/* Mobile nav open */
 .navbar.open .nav-links {
   display: flex;
   flex-direction: column;
@@ -263,9 +232,7 @@ section {
   gap: 22px;
 }
 
-.navbar.open .nav-links a {
-  font-size: 0.9rem;
-}
+.navbar.open .nav-links a { font-size: 0.9rem; }
 
 /* =============================================
    HERO
@@ -368,8 +335,7 @@ section {
 
 .hero-stat {
   flex: 1;
-  padding: 32px 0 0;
-  padding-right: 24px;
+  padding: 32px 24px 0 0;
 }
 
 .hero-stat-num {
@@ -417,10 +383,7 @@ section {
   max-width: 360px;
 }
 
-.what-right {
-  display: flex;
-  flex-direction: column;
-}
+.what-right { display: flex; flex-direction: column; }
 
 .what-pillar {
   display: grid;
@@ -431,10 +394,7 @@ section {
   align-items: start;
 }
 
-.what-pillar:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
+.what-pillar:last-child { border-bottom: none; padding-bottom: 0; }
 
 .what-pillar-icon {
   width: 38px;
@@ -450,9 +410,7 @@ section {
   transition: border-color var(--transition);
 }
 
-.what-pillar:hover .what-pillar-icon {
-  border-color: var(--gold);
-}
+.what-pillar:hover .what-pillar-icon { border-color: var(--gold); }
 
 .what-pillar h4 {
   font-family: 'DM Sans', sans-serif;
@@ -472,13 +430,9 @@ section {
 /* =============================================
    ECOSYSTEM
 ============================================= */
-.ecosystem {
-  background: var(--bg);
-}
+.ecosystem { background: var(--bg); }
 
-.section-header {
-  margin-bottom: 56px;
-}
+.section-header { margin-bottom: 56px; }
 
 .section-header h2 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
@@ -492,9 +446,7 @@ section {
   line-height: 1.78;
 }
 
-.eco-category {
-  margin-bottom: 52px;
-}
+.eco-category { margin-bottom: 52px; }
 
 .eco-category-label {
   font-size: 0.68rem;
@@ -535,9 +487,7 @@ section {
   transition: background var(--transition);
 }
 
-.eco-card:hover {
-  background: var(--surface-2);
-}
+.eco-card:hover { background: var(--surface-2); }
 
 .eco-card-status {
   position: absolute;
@@ -551,20 +501,9 @@ section {
   border-radius: 2px;
 }
 
-.status-execute {
-  background: rgba(201,168,76,0.15);
-  color: var(--gold);
-}
-
-.status-activate {
-  background: rgba(26,107,107,0.2);
-  color: var(--teal-light);
-}
-
-.status-position {
-  background: rgba(122,130,153,0.15);
-  color: var(--muted);
-}
+.status-execute { background: rgba(201,168,76,0.15); color: var(--gold); }
+.status-activate { background: rgba(26,107,107,0.2); color: var(--teal-light); }
+.status-position { background: rgba(122,130,153,0.15); color: var(--muted); }
 
 .eco-card-num {
   font-family: 'Cormorant Garamond', serif;
@@ -658,9 +597,7 @@ section {
   transition: border-color var(--transition);
 }
 
-.gateway-item:hover .gateway-item-icon {
-  border-color: var(--gold);
-}
+.gateway-item:hover .gateway-item-icon { border-color: var(--gold); }
 
 .gateway-item-text h4 {
   font-family: 'DM Sans', sans-serif;
@@ -680,9 +617,7 @@ section {
 /* =============================================
    FEATURED / NEWS
 ============================================= */
-.featured {
-  background: var(--surface);
-}
+.featured { background: var(--surface); }
 
 .featured-grid {
   display: grid;
@@ -705,9 +640,7 @@ section {
   transition: background var(--transition);
 }
 
-.featured-card:hover {
-  background: var(--surface-2);
-}
+.featured-card:hover { background: var(--surface-2); }
 
 .featured-card-tag {
   font-size: 0.66rem;
@@ -718,14 +651,8 @@ section {
   margin-bottom: 12px;
 }
 
-.featured-card h3 {
-  font-size: 1.3rem;
-  line-height: 1.3;
-}
-
-.featured-card-sm h3 {
-  font-size: 1rem;
-}
+.featured-card h3 { font-size: 1.3rem; line-height: 1.3; }
+.featured-card-sm h3 { font-size: 1rem; }
 
 .featured-card-meta {
   font-size: 0.73rem;
@@ -745,13 +672,11 @@ section {
   transition: gap var(--transition);
 }
 
-.featured-card-link:hover {
-  gap: 10px;
-}
+.featured-card-link:hover { gap: 10px; }
 
 /* =============================================
    PARTNERS IN ENTERPRISE & IMPACT
-   GLOBAL COMPONENT — appears on every page
+   GLOBAL COMPONENT
 ============================================= */
 .partners-global {
   background: var(--bg);
@@ -793,7 +718,7 @@ section {
   line-height: 1.75;
 }
 
-/* Carousel track */
+/* Carousel */
 .partners-track-wrap {
   width: 100%;
   overflow: hidden;
@@ -827,9 +752,7 @@ section {
   animation: scroll-partners 34s linear infinite;
 }
 
-.partners-track:hover {
-  animation-play-state: paused;
-}
+.partners-track:hover { animation-play-state: paused; }
 
 @keyframes scroll-partners {
   0%   { transform: translateX(0); }
@@ -837,9 +760,7 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .partners-track {
-    animation: none;
-  }
+  .partners-track { animation: none; }
 }
 
 .partner-logo-item {
@@ -851,34 +772,26 @@ section {
   border-right: 1px solid var(--border);
   flex-shrink: 0;
   transition: opacity var(--transition);
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
-.partner-logo-item:hover {
-  opacity: 1;
+.partner-logo-item:hover { opacity: 1; }
+
+/* Partner logo image sizing */
+.partner-logo-item img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  /* If a logo has a white background, add a filter to help it blend:
+     filter: brightness(0) invert(1);
+     Use only when logos are provided as solid-colour marks, not full-colour */
 }
 
 .partner-logo-item a {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Placeholder pills — replace inner content with <img> tags */
-.partner-logo-pill {
-  height: 30px;
-  padding: 0 18px;
-  border: 1px solid var(--border);
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--text);
-  white-space: nowrap;
 }
 
 .partners-global-cta {
@@ -930,10 +843,7 @@ section {
   margin-bottom: 26px;
 }
 
-.footer-socials {
-  display: flex;
-  gap: 10px;
-}
+.footer-socials { display: flex; gap: 10px; }
 
 .footer-socials a {
   width: 34px;
@@ -971,9 +881,7 @@ section {
   transition: color var(--transition);
 }
 
-.footer-col a:hover {
-  color: var(--gold);
-}
+.footer-col a:hover { color: var(--gold); }
 
 .footer-bottom {
   display: flex;
@@ -989,10 +897,7 @@ section {
   color: var(--muted-2);
 }
 
-.footer-bottom-right {
-  display: flex;
-  gap: 22px;
-}
+.footer-bottom-right { display: flex; gap: 22px; }
 
 .footer-bottom-right a {
   font-size: 0.76rem;
@@ -1000,9 +905,7 @@ section {
   transition: color var(--transition);
 }
 
-.footer-bottom-right a:hover {
-  color: var(--gold);
-}
+.footer-bottom-right a:hover { color: var(--gold); }
 
 /* =============================================
    WHATSAPP FLOAT
@@ -1025,9 +928,7 @@ section {
   transition: transform var(--transition);
 }
 
-.wa-float:hover {
-  transform: scale(1.08);
-}
+.wa-float:hover { transform: scale(1.08); }
 
 /* =============================================
    RESPONSIVE
@@ -1036,29 +937,31 @@ section {
   .gateway-grid { grid-template-columns: repeat(3, 1fr); }
   .eco-grid-4   { grid-template-columns: repeat(2, 1fr); }
   .footer-grid  { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .nav-links    { gap: 20px; }
+  .nav-links    { gap: 18px; }
 }
 
 @media (max-width: 900px) {
-  .what-inner       { grid-template-columns: 1fr; gap: 44px; }
-  .what-left p      { max-width: 100%; }
-  .featured-grid    { grid-template-columns: 1fr; }
-  .gateway-grid     { grid-template-columns: repeat(2, 1fr); }
-  .eco-grid         { grid-template-columns: 1fr; }
-  .eco-grid-2       { grid-template-columns: 1fr; }
+  .what-inner    { grid-template-columns: 1fr; gap: 44px; }
+  .what-left p   { max-width: 100%; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .gateway-grid  { grid-template-columns: repeat(2, 1fr); }
+  .eco-grid      { grid-template-columns: 1fr; }
+  .eco-grid-2    { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-  section           { padding: 72px 0; }
-  .container        { padding: 0 20px; }
+  section     { padding: 72px 0; }
+  .container  { padding: 0 20px; }
 
-  .nav-links        { display: none; }
-  .btn-nav-wa       { display: none; }
-  .menu-toggle      { display: block; }
+  .nav-links    { display: none; }
+  .btn-nav-wa   { display: none; }
+  .menu-toggle  { display: block; }
 
-  .hero h1          { font-size: 2.2rem; }
-  .hero-body        { font-size: 0.95rem; }
-  .hero-actions     { flex-direction: column; }
+  .nav-logo-img { height: 36px; }
+
+  .hero h1 { font-size: 2.2rem; }
+  .hero-body { font-size: 0.95rem; }
+  .hero-actions { flex-direction: column; }
 
   .hero-stats {
     flex-direction: column;
@@ -1071,9 +974,9 @@ section {
     padding: 22px 0;
   }
 
-  .eco-grid-4       { grid-template-columns: 1fr 1fr; }
-  .footer-grid      { grid-template-columns: 1fr; gap: 32px; }
-  .footer-bottom    { flex-direction: column; align-items: flex-start; }
+  .eco-grid-4 { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
   .footer-bottom-right { flex-wrap: wrap; gap: 14px; }
 
   .partner-logo-item { padding: 0 28px; }
@@ -1082,8 +985,7 @@ section {
 }
 
 @media (max-width: 520px) {
-  .hero h1            { font-size: 1.85rem; }
-  .gateway-grid       { grid-template-columns: 1fr; }
-  .eco-grid-4         { grid-template-columns: 1fr; }
-  .hero-kicker-text   { font-size: 0.62rem; }
+  .hero h1     { font-size: 1.85rem; }
+  .gateway-grid { grid-template-columns: 1fr; }
+  .eco-grid-4  { grid-template-columns: 1fr; }
 }
